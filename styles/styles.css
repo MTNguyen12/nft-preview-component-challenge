@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: hsl(217, 54%, 11%);
+}
+
+.center {
+  display: grid;
+  place-items: center;
+  height: 100svh;
+}
+
+.nft-bg {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  border-radius: 28px 28px 60px 60px;
+  width: 356px;
+  height: 626px;
+  background-color: hsl(220, 48%, 11%);
+}
+
+.nft-card {
+  position: absolute;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 16px;
+  width: 90%;
+  height: 87%;
+  background-color: hsl(216, 50%, 16%);
+}
+
+/* img and hover */
+
+.img-container {
+  position: relative;
+  align-self: center;
+  margin-top: 1.5em;
+  width: 272px;
+  height: 272px;
+}
+
+.nft-image {
+  border-radius: 12px;
+  width: 100%;
+}
+
+.overlay, .view-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  place-content: center;
+  opacity: 0;
+  transition: all 0.25s linear;
+  margin-left: -136px;
+  margin-top: -136px;
+  width: 272px;
+  height: 272px;
+  cursor: pointer;
+}
+
+.img-container:hover .overlay {
+  opacity: 0.5;
+  border-radius: 12px;
+  background-color: hsl(178, 100%, 50%);
+}
+
+.img-container:hover .view-icon {
+  opacity: 1;
+}
+
+.nft-image:hover {
+  opacity: 0.5;
+  background-color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+/* text and hover */
+
+p {
+  color: hsl(215, 51%, 70%);
+}
+
+h1 {
+  font-size: 1.4em;
+  color: hsl(0, 0%, 100%);
+}
+
+span {
+  color: hsl(0, 0%, 100%);
+}
+
+h1, span {
+  transition: color 0.25s linear;
+}
+
+h1:hover, span:hover {
+  cursor: pointer;
+  color: hsl(178, 100%, 50%);
+}
+
+hr {
+  border: none 0;
+  border-bottom: solid 1px hsl(215, 32%, 27%);
+}
+
+.nft-information {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1.5em;
+  height: 100%;
+  line-height: 1.7em;
+  font-weight: 300;
+}
+
+.auction-info {
+  display: flex;
+  font-weight: 400;
+}
+
+.ethereum, .timer {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+.timer {
+  justify-content: flex-end;
+}
+
+.price {
+  color: hsl(178, 100%, 50%);
+}
+
+.price, .time-limit {
+  margin-left: 8px;
+}
+
+.auction-info img {
+  height: 1.1em;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+}
+
+.author-image {
+  margin-right: 16px;
+  border: solid 1px hsl(0, 0%, 100%);
+  border-radius: 1em;
+  width: 2em;
+}
+
+/* media query for non-mobile */
+
+@media screen and (min-width: 600px) {
+  .description {
+    font-size: 18px;
+  }
+
+  .nft-bg {
+    width: 380px;
+    height: 640px;
+  }
+
+  .nft-card {
+    width: 91%;
+    height: 90%;
+  }
+
+  .img-container {
+    width: 296px;
+    height: 296px;
+  }
+
+  .overlay {
+    width: 296px;
+    height: 296px;
+    margin-top: -148px;
+    margin-left: -148px;
+  }
+}
